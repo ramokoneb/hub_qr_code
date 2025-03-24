@@ -15,7 +15,7 @@ const Dashboard = () => {
       
       <div className="w-full max-w-md">
         <QRCodeGenerator />
-        <div className="mt-8 text-xs text-muted-foreground text-center">
+        <div className="mt-8 text-xs text-skyblue text-center">
           © 2023 Zona de Conversão. Todos os direitos reservados.
         </div>
       </div>

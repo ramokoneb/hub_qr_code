@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
+    --background: 0 0% 16%;
     --foreground: 0 0% 95%;
 
-    --card: 240 5% 10%;
+    --card: 0 0% 20%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 240 5% 8%;
+    --popover: 0 0% 16%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 150 100% 50%;
-    --primary-foreground: 240 10% 3.9%;
+    --primary: 217 84% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 5% 10%;
+    --secondary: 0 0% 20%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 0 0% 24%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 240 5% 15%;
+    --accent: 252 75% 66%;
     --accent-foreground: 0 0% 95%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 95%;
 
-    --border: 240 5% 15%;
-    --input: 240 5% 15%;
-    --ring: 142.1 70.6% 45.3%;
+    --border: 0 0% 24%;
+    --input: 0 0% 24%;
+    --ring: 217 84% 60%;
 
     --radius: 0.5rem;
   }
@@ -54,11 +54,11 @@
 
 @layer components {
   .neon-text {
-    @apply text-neon font-bold tracking-widest animate-glow;
+    @apply text-primary font-bold tracking-widest animate-glow;
   }
 
   .tech-border {
-    @apply border border-muted/40 backdrop-blur-sm bg-black/50;
+    @apply border border-muted/40 backdrop-blur-sm bg-black/30;
   }
 
   .tech-card {
@@ -66,7 +66,7 @@
   }
 
   .tech-input {
-    @apply bg-black/50 border-muted/60 focus:border-neon focus:ring-1 focus:ring-neon rounded-md px-4 py-2 w-full transition-all duration-300;
+    @apply bg-black/30 border-muted/60 focus:border-primary focus:ring-1 focus:ring-primary rounded-md px-4 py-2 w-full transition-all duration-300;
   }
 
   .shimmer {
@@ -74,11 +74,19 @@
   }
   
   .tech-button {
-    @apply bg-neon hover:bg-neon/80 text-black font-medium rounded-md px-6 py-2 transition-all duration-300 shadow-[0_0_10px_rgba(0,255,136,0.5)];
+    @apply bg-primary hover:bg-primary/80 text-white font-medium rounded-md px-6 py-2 transition-all duration-300 shadow-[0_0_10px_rgba(67,127,237,0.5)];
   }
 
   .loader {
-    @apply w-10 h-10 border-4 border-muted border-t-neon rounded-full animate-spin mx-auto my-4;
+    @apply w-10 h-10 border-4 border-muted border-t-accent rounded-full animate-spin mx-auto my-4;
+  }
+  
+  .accent-button {
+    @apply bg-accent hover:bg-accent/80 text-white font-medium rounded-md px-6 py-2 transition-all duration-300 shadow-[0_0_10px_rgba(109,102,236,0.5)];
+  }
+  
+  .highlight-text {
+    @apply text-highlight font-medium;
   }
 }
 

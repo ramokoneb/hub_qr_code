@@ -60,12 +60,12 @@ const LoginForm = () => {
     <div className="tech-card w-full max-w-md p-8 animate-fadeIn">
       <div className="mb-8 text-center">
         <h2 className="neon-text text-2xl mb-1">ZONA DE CONVERSÃO</h2>
-        <p className="text-muted-foreground">Entre com suas credenciais</p>
+        <p className="text-skyblue">Entre com suas credenciais</p>
       </div>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-2">
-          <label htmlFor="username" className="text-sm font-medium block text-left">
+          <label htmlFor="username" className="text-sm font-medium block text-left text-white">
             Usuário
           </label>
           <input
@@ -80,7 +80,7 @@ const LoginForm = () => {
         </div>
         
         <div className="space-y-2">
-          <label htmlFor="password" className="text-sm font-medium block text-left">
+          <label htmlFor="password" className="text-sm font-medium block text-left text-white">
             Senha
           </label>
           <input
