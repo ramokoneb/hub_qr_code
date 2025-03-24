@@ -59,8 +59,8 @@ const LoginForm = () => {
   return (
     <div className="tech-card w-full max-w-md p-8 animate-fadeIn">
       <div className="mb-8 text-center">
-        <h2 className="neon-text text-2xl mb-1 text-primary">ZONA DE CONVERSÃO</h2>
-        <p className="text-royal">Entre com suas credenciais</p>
+        <h2 className="text-2xl mb-1 text-primary font-bold tracking-tight">ZONA DE CONVERSÃO</h2>
+        <p className="text-accent">Entre com suas credenciais</p>
       </div>
       
       <form onSubmit={handleSubmit} className="space-y-4">
