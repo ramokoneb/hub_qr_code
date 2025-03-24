@@ -59,13 +59,13 @@ const LoginForm = () => {
   return (
     <div className="tech-card w-full max-w-md p-8 animate-fadeIn">
       <div className="mb-8 text-center">
-        <h2 className="neon-text text-2xl mb-1">ZONA DE CONVERSÃO</h2>
-        <p className="text-skyblue">Entre com suas credenciais</p>
+        <h2 className="neon-text text-2xl mb-1 text-primary">ZONA DE CONVERSÃO</h2>
+        <p className="text-royal">Entre com suas credenciais</p>
       </div>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-2">
-          <label htmlFor="username" className="text-sm font-medium block text-left text-white">
+          <label htmlFor="username" className="text-sm font-medium block text-left text-foreground">
             Usuário
           </label>
           <input
@@ -80,7 +80,7 @@ const LoginForm = () => {
         </div>
         
         <div className="space-y-2">
-          <label htmlFor="password" className="text-sm font-medium block text-left text-white">
+          <label htmlFor="password" className="text-sm font-medium block text-left text-foreground">
             Senha
           </label>
           <input

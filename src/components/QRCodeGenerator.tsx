@@ -117,13 +117,13 @@ const QRCodeGenerator = () => {
   return (
     <div className="tech-card w-full max-w-md p-8 animate-fadeIn">
       <div className="mb-8 text-center">
-        <h2 className="neon-text text-2xl mb-1">GERADOR DE QR CODE</h2>
+        <h2 className="neon-text text-2xl mb-1 text-primary">GERADOR DE QR CODE</h2>
         <p className="text-muted-foreground">Crie uma nova instância</p>
       </div>
       
       <div className="space-y-4">
         <div className="space-y-2">
-          <label htmlFor="instanceName" className="text-sm font-medium block text-left">
+          <label htmlFor="instanceName" className="text-sm font-medium block text-left text-foreground">
             Nome da Instância
           </label>
           <input
@@ -155,7 +155,7 @@ const QRCodeGenerator = () => {
         {timerActive && (
           <div className="mt-4 flex items-center justify-center text-sm">
             <RefreshCw size={16} className="mr-2 animate-spin" />
-            <span>Novo QR Code em: <span className="text-neon font-bold">{timeLeft}s</span></span>
+            <span>Novo QR Code em: <span className="text-primary font-bold">{timeLeft}s</span></span>
           </div>
         )}
 
