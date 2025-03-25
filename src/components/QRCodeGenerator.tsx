@@ -117,8 +117,8 @@ const QRCodeGenerator = () => {
   return (
     <div className="tech-card w-full max-w-md p-8 animate-fadeIn">
       <div className="mb-8 text-center">
-        <h2 className="neon-text text-2xl mb-1 text-primary">GERADOR DE QR CODE</h2>
-        <p className="text-muted-foreground">Crie uma nova instância</p>
+        <h2 className="text-2xl mb-1 text-primary font-bold tracking-tight">GERADOR DE QR CODE</h2>
+        <p className="text-accent">Crie uma nova instância <em>(Não utilize espaço)</em></p>
       </div>
       
       <div className="space-y-4">
