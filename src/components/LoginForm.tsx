@@ -24,20 +24,27 @@ const LoginForm = () => {
     setIsLoading(true);
 
     try {
+      // Adding credentials and correct CORS headers for deployment environments
       const response = await fetch('https://webhook.zonadeconversao.space/webhook/auth', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify({ username, password }),
       });
 
       const data = await response.json();
 
+      console.log('Login response:', data); // Debug response
+
       if (data.status === 'success') {
         toast({
           description: data.mensagem || "Login realizado com sucesso!",
         });
+        // Store authentication state in localStorage to persist across page refreshes
+        localStorage.setItem('isAuthenticated', 'true');
         navigate('/dashboard');
       } else {
         toast({
@@ -46,11 +53,11 @@ const LoginForm = () => {
         });
       }
     } catch (error) {
+      console.error('Login error:', error);
       toast({
         variant: "destructive",
         description: "Erro ao conectar com o servidor. Tente novamente mais tarde.",
       });
-      console.error('Login error:', error);
     } finally {
       setIsLoading(false);
     }
